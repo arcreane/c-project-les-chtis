@@ -1,0 +1,13 @@
+# Target labels
+ UltralightSDK
+# Source files and their labels
+/Users/ramiosman/Desktop/ultralight-quick-start/cmake-build-debug/CMakeFiles/UltralightSDK
+/Users/ramiosman/Desktop/ultralight-quick-start/cmake-build-debug/CMakeFiles/UltralightSDK.rule
+/Users/ramiosman/Desktop/ultralight-quick-start/cmake-build-debug/CMakeFiles/UltralightSDK-complete.rule
+/Users/ramiosman/Desktop/ultralight-quick-start/cmake-build-debug/UltralightSDK-prefix/src/UltralightSDK-stamp/UltralightSDK-build.rule
+/Users/ramiosman/Desktop/ultralight-quick-start/cmake-build-debug/UltralightSDK-prefix/src/UltralightSDK-stamp/UltralightSDK-configure.rule
+/Users/ramiosman/Desktop/ultralight-quick-start/cmake-build-debug/UltralightSDK-prefix/src/UltralightSDK-stamp/UltralightSDK-download.rule
+/Users/ramiosman/Desktop/ultralight-quick-start/cmake-build-debug/UltralightSDK-prefix/src/UltralightSDK-stamp/UltralightSDK-install.rule
+/Users/ramiosman/Desktop/ultralight-quick-start/cmake-build-debug/UltralightSDK-prefix/src/UltralightSDK-stamp/UltralightSDK-mkdir.rule
+/Users/ramiosman/Desktop/ultralight-quick-start/cmake-build-debug/UltralightSDK-prefix/src/UltralightSDK-stamp/UltralightSDK-patch.rule
+/Users/ramiosman/Desktop/ultralight-quick-start/cmake-build-debug/UltralightSDK-prefix/src/UltralightSDK-stamp/UltralightSDK-update.rule

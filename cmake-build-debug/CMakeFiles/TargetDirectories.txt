@@ -1,0 +1,4 @@
+/Users/ramiosman/Desktop/ultralight-quick-start/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/ramiosman/Desktop/ultralight-quick-start/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/ramiosman/Desktop/ultralight-quick-start/cmake-build-debug/CMakeFiles/MyApp.dir
+/Users/ramiosman/Desktop/ultralight-quick-start/cmake-build-debug/CMakeFiles/UltralightSDK.dir
