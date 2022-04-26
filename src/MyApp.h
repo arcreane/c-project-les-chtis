@@ -47,4 +47,8 @@ protected:
   RefPtr<App> app_;
   RefPtr<Window> window_;
   RefPtr<Overlay> overlay_;
+
+    void SetListener(JSContextRef ctx, char *funName,
+                     JSValueRef (*function)(JSContextRef, JSObjectRef, JSObjectRef, size_t, JSValueRef const *,
+                                            JSValueRef *));
 };

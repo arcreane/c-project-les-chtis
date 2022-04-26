@@ -1,13 +1,33 @@
 <html>
-  <head>
+<head>
     <title>MyApp -- (edit this title in app.html)</title>
     <style>
-    body {
-      font-family: -apple-system, 'Segoe UI Light', Ubuntu, Arial, sans-serif;
-    }
+        body {
+            font-family: -apple-system, 'Segoe UI Light', Ubuntu, Arial, sans-serif;
+        }
     </style>
-  </head>
-  <body>
-    <h1>Hello World, Welcome !</h1>
-  </body>
+</head>
+<body>
+<h1>Welcome to CYTECH Store registry</h1>
+<h2>Please select your option</h2>
+<div id="main">
+    <button onclick="openRegistryPage();">
+        Open registry
+    </button>
+    <button onclick="openRecordPage();">
+        Add a new record
+    </button>
+    <h1 id="result"></h1>
+    <div id="registry_page" style="display: none;">
+        <div style="">
+            <h3>Please enter the record ID:</h3><br/>
+            <input id="recordId" type="text" placeholder="ex. #I487X">
+            <button onclick="searchByRecord(document.getElementById('recordId').value);">Search</button>
+        </div>
+    </div>
+    <div id="add_registry_record" style="display: none;">
+        test 2
+    </div>
+</div>
+</body>
 </html>
