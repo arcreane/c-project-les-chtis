@@ -1,6 +1,6 @@
 # Ignore build/bin directories
 [Bb]uild/
 build_*/
-cmake-build-debug/
 .DS_Store
-build/
+/cmake-build-debug/
+
