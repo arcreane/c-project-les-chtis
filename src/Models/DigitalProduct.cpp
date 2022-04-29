@@ -4,7 +4,7 @@
 #include <iostream>
 #include "DigitalProduct.h"
 
-DigitalProduct::DigitalProduct(string name, string createdAt, string updatedAt, string providerName): Product(name, createdAt, updatedAt, providerName){
+DigitalProduct::DigitalProduct(string name, string createdAt, string updatedAt, string providerName): Product("DIGITAL_" + name, createdAt, updatedAt, providerName){
 
 }
 
