@@ -13,7 +13,7 @@ Before you build and run, you'll need to [install the prerequisites](https://doc
 To clone the repo and build, run the following:
 
 ```shell
-git clone https://github.com/ultralight-ux/ultralight-quick-start
+git clone https://github.com/arcreane/c-project-les-rami-batma-esteban-ilyes.git
 cd ultralight-quick-start
 mkdir build
 cd build
