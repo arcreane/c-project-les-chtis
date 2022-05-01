@@ -232,7 +232,7 @@ void MyApp::OnDOMReady(ultralight::View *caller,
     SetListener(ctx, "openRecordPage", openRecordPage);
     SetListener(ctx, "searchByRecord", searchByRecord);
 
-    this->updateRecords();
+    //this->updateRecords();
 }
 
 void MyApp::SetListener(JSContextRef ctx, char *funName, JSValueRef function(JSContextRef ctx, JSObjectRef function,
