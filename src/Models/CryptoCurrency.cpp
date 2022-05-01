@@ -4,10 +4,11 @@
 
 #include "CryptoCurrency.h"
 
-CryptoCurrency::CryptoCurrency(string currencyCode, string currencyName, string createdAt, string updatedAt,
+CryptoCurrency::CryptoCurrency(int amount, string currencyCode, string currencyName, string createdAt, string updatedAt,
                                string providerName) : DigitalProduct("CRYPTO_" + currencyCode, createdAt, updatedAt, providerName){
     this->currencyName = currencyName;
     this->currencyCode = currencyCode;
+    this->amount = amount;
 }
 
 int CryptoCurrency::getBalance() {

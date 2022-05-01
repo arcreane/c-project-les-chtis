@@ -4,7 +4,7 @@
 #include "Product.h"
 #ifndef MYAPP_DIGITALPRODUCT_H
 #define MYAPP_DIGITALPRODUCT_H
-#endif //MYAPP_DIGITALPRODUCT_H
+
 
 class DigitalProduct: public Product{
 private:
@@ -15,3 +15,5 @@ public:
     void setToken(string token);
     string getToken();
 };
+
+#endif //MYAPP_DIGITALPRODUCT_H

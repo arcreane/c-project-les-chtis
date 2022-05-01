@@ -5,17 +5,17 @@
 #ifndef MYAPP_PEA_H
 #define MYAPP_PEA_H
 
-#endif //MYAPP_PEA_H
-
 #include <iostream>
 #include <list>
 #include "BankProduct.h"
 
 class PEA: public BankProduct{
 private:
-    std::list<string> values;
+    string values;
 public:
     PEA(string name, string accountId, string createdAt, string updatedAt, string providerName);
     void addOrder(string order);
-    std::list<string> getOrders();
+    string getOrders();
 };
+
+#endif //MYAPP_PEA_H

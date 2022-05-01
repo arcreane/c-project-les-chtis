@@ -5,15 +5,19 @@
 #ifndef MYAPP_COMPTEDEVISE_H
 #define MYAPP_COMPTEDEVISE_H
 
-#endif //MYAPP_COMPTEDEVISE_H
 #include "BankProduct.h"
 
-class CompteDevice: public BankProduct {
+class CompteDevise: public BankProduct {
 private:
     int rate;
     int ceiling;
+    int amount;
 public:
-    CompteDevice(int rate, int ceiling, string accountId ,string name, string createdAt, string updatedAt, string providerName);
+    CompteDevise(int amount, int rate, int ceiling, string accountId ,string name, string createdAt, string updatedAt, string providerName);
     int getRate();
     int getCeiling();
+    int getAmount();
 };
+
+
+#endif //MYAPP_COMPTEDEVISE_H

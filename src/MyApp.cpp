@@ -1,8 +1,16 @@
 #include "MyApp.h"
 #include <iostream>
-
+#include "Models/PEA.h"
 #define WINDOW_WIDTH  1280
 #define WINDOW_HEIGHT 720
+#include "../rapidjson/document.h"
+#include "../rapidjson/writer.h"
+#include "../rapidjson/stringbuffer.h"
+#include <fstream>
+#include "Utils/DataLoader/DataLoader.cpp"
+using namespace std;
+using namespace rapidjson;
+
 
 MyApp::MyApp() {
     ///
@@ -10,7 +18,6 @@ MyApp::MyApp() {
     ///
     app_ = App::Create();
 
-    ///
     /// Create a resizable window by passing by OR'ing our window flags with
     /// kWindowFlags_Resizable.
     ///
@@ -56,6 +63,7 @@ MyApp::MyApp() {
     /// View's OnChangeCursor and OnChangeTitle events below.
     ///
     overlay_->view()->set_view_listener(this);
+
 }
 
 MyApp::~MyApp() {
@@ -112,6 +120,74 @@ JSValueRef openRegistryPage(JSContextRef ctx, JSObjectRef function,
     return JSValueMakeNull(ctx);
 }
 
+JSValue MyApp::updateRecords(){
+
+    DataLoader dataLoader;
+
+    dataLoader.loadInProducts();
+
+    std::list<PEA> peas = dataLoader.getPeas();
+    std::list<CryptoCurrency> cryptoCurrencies = dataLoader.getCryptoCurrencies();
+    std::list<Nft> nfts = dataLoader.getNfts();
+    std::list<CompteDevise> compteDevises = dataLoader.getComptesDevises();
+
+    string htmlPart = "<div class=\"row\"><div class=\"gauche\"><h2>Bancaire : </h2>";
+
+
+    for(PEA pea : peas){
+        string part ="<div class=\"card\">";
+        part += "<div class=\"top\">" + pea.getName() + "</div>";
+        part += "<div class=\"body\">";
+        part += "<p class=\"name\"> Banque : <span class=\"value\">"+pea.getProviderName() + "</span> </p>";
+        part += "<p class=\"name\">Actions :  <span class=\"value\">"+pea.getOrders() + "</span> </p>";
+        part += "</div> </div>";
+
+        htmlPart+=part;
+    }
+
+    for (CompteDevise cpt : compteDevises){
+        string part ="<div class=\"card\">";
+        part += "<div class=\"top\">" + cpt.getName() + "</div>";
+        part += "<div class=\"body\">";
+        part += "<p class=\"name\"> Banque : <span class=\"value\">"+cpt.getProviderName() + "</span> </p>";
+        part += "<p class=\"name\"> Taux :  <span class=\"value\">"+std::to_string(cpt.getRate()) + "</span> </p>";
+        part += "<p class=\"name\"> Solde :  <span class=\"value\">"+std::to_string(cpt.getAmount()) + "</span> </p>";
+        part += "</div> </div>";
+
+        htmlPart+=part;
+    }
+    htmlPart+="</div>";
+    htmlPart+="<div class=\"droite\"><h2>Digital : </h2>";
+
+    for (CryptoCurrency crypto : cryptoCurrencies){
+        string part ="<div class=\"card\">";
+        part += "<div class=\"top\">" + crypto.getName() + "</div>";
+        part += "<div class=\"body\">";
+        part += "<p class=\"name\"> Code monnaie : <span class=\"value\">"+ crypto.getToken() + "</span> </p>";
+        part += "<p class=\"name\"> Solde :  <span class=\"value\">"+ std::to_string(crypto.getBalance()) + "</span> </p>";
+        part += "</div> </div>";
+
+        htmlPart+=part;
+    }
+
+    for(Nft nft : nfts){
+        string part ="<div class=\"card\">";
+        part += "<div class=\"top\">" + nft.getName() + "</div>";
+        part += "<div class=\"body\">";
+        part += "<p class=\"name\"> Nom : <span class=\"value\">"+ nft.getName() + "</span> </p>";
+        part += "<p class=\"name\"> Seller :  <span class=\"value\">"+nft.getProviderName() + "</span> </p>";
+        part += "<p class=\"name\"> Cote :  <span class=\"value\">"+ nft.getCurrentCote()  + "</span> </p>";
+        part += "</div> </div>";
+
+        htmlPart+=part;
+    }
+
+    htmlPart+= "</div></div>";
+
+    return JSValue(&htmlPart);
+}
+
+
 JSValueRef openRecordPage(JSContextRef ctx, JSObjectRef function,
                           JSObjectRef thisObject, size_t argumentCount,
                           const JSValueRef arguments[], JSValueRef *exception) {
@@ -157,6 +233,7 @@ void MyApp::OnDOMReady(ultralight::View *caller,
     SetListener(ctx, "openRecordPage", openRecordPage);
     SetListener(ctx, "searchByRecord", searchByRecord);
 
+    //this->updateRecords();
 }
 
 void MyApp::SetListener(JSContextRef ctx, char *funName, JSValueRef function(JSContextRef ctx, JSObjectRef function,

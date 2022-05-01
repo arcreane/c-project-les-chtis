@@ -5,7 +5,6 @@
 #ifndef MYAPP_CRYPTOCURRENCY_H
 #define MYAPP_CRYPTOCURRENCY_H
 
-#endif //MYAPP_CRYPTOCURRENCY_H
 #include "DigitalProduct.h"
 
 class CryptoCurrency: public DigitalProduct{
@@ -15,8 +14,10 @@ private:
     int amount;
 
 public:
-    CryptoCurrency(string currencyCode, string currencyName, string createdAt, string updatedAt, string providerName);
+    CryptoCurrency(int amount, string currencyCode, string currencyName, string createdAt, string updatedAt, string providerName);
     int getBalance();
     string getCurrencyName();
 
 };
+
+#endif //MYAPP_CRYPTOCURRENCY_H

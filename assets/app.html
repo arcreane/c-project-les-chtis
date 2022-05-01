@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@500;700&display=swap"
-        rel="stylesheet">
+          rel="stylesheet">
+
 
 
 
@@ -22,9 +24,9 @@
             font-family: 'Open Sans', sans-serif;
             background-color: #233D4D;
             color: white;
-            
             overflow: hidden;
             margin: 0;
+
         }
         .root {
             width: 100%;
@@ -110,6 +112,8 @@
             height: 720px;
             margin-bottom: 50px;
             margin-left: 18%;
+
+            padding-top: 40px;
         }
 
         .spacer-top {
@@ -130,85 +134,397 @@
             margin: 0 auto;
             width: 70%;
         }
+
+
+        .row{
+            display: flex;
+        }
+
+        .gauche,.droite{
+            width: 400px;
+            margin-right: 45px;
+        }
+
+
+
+
+        /*
+
+
+            PAGE PATRIMOINE
+
+
+        */
+
+        .card{
+            border: 2px solid #990000;
+            margin-bottom: 10px;
+        }
+
+        .card .top{
+            text-align: center;
+            font-size: 21px;
+            font-weight: 800;
+            color: white;
+            background-color: #990000;
+        }
+
+
+        .card .body{
+            padding: 10px;
+        }
+
+
+        .value{
+            font-weight: 900;
+        }
+
+
+
+
+
+        /*
+
+
+            PAGE AJOUTER UN COMPTE
+
+
+        */
+
+
+
+
+        .bouton {
+            display: inline-block;
+            width: max-content;
+            font-weight: 700;
+            font-size: 18px;
+            text-decoration: none;
+            padding: 6px 15px;
+            border: 2px solid #990000;
+            color: #990000;
+            transition: all ease-in-out .200s;
+
+            cursor: pointer;
+        }
+
+        .bouton:hover {
+            background-color: #990000;
+            color: white;
+        }
+
+        .bouton-vert{
+            border-color: #a1c181;
+            color: #a1c181;
+        }
+
+        .bouton-vert:hover{
+            background-color: #a1c181;
+            color: white;
+        }
+
+
+
+        .bank_part2, .digital_part2 {
+            display: none;
+            margin-top: 25px;
+        }
+
+        .form-root{
+            display: none;
+        }
+
+
+
+        .form-root input{
+            border: 2px solid #fcca46;
+            border-radius: 8px;
+            height: 30px;
+            width: 250px;
+            margin-top: 10px;
+        }
+
+        .form-element{
+            display: block;
+            margin: 30px 0;
+        }
+
+        .form-element label{
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+
     </style>
 </head>
 
 <body>
-    <div class="root">
-        <nav>
-            <div class="nav-root">
-                <a href="#page_main">
+<div class="root">
+    <nav>
+        <div class="nav-root">
+            <a href="#page_main">
                 <div class="nav-content">
                     <div class="nav-link">
                         <i class="fas fa-home"></i>
                         <span class="icon-text">Accueil</span>
                     </div>
                 </div>
-                </a>
-            </div>
+            </a>
+        </div>
 
-            <div class="nav-root">
-                <a href="#page_dashboard">
+        <div class="nav-root">
+            <a href="#page_dashboard">
                 <div class="nav-content">
                     <div class="nav-link">
-                        <i class="fas fa-home"></i>
+                        <i class="fas fa-wallet"></i>
                         <span class="icon-text">Mon patrimoine</span>
                     </div>
                 </div>
-                </a>
-            </div>
+            </a>
+        </div>
 
-            <div class="nav-root">
+        <div class="nav-root">
+            <a href="#page_ajout">
                 <div class="nav-content">
                     <div class="nav-link">
-                        <i class="fas fa-home"></i>
-                        <span class="icon-text">Ajouter un truc</span>
+                        <i class="fas fa-money-check"></i>
+                        <span class="icon-text">Ajouter un compte</span>
                     </div>
                 </div>
+            </a>
+        </div>
+    </nav>
+
+    <main>
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="page_main" class="page">
+            <div class="spacer-top"></div>
+            <div class="head red">
+                <h1>Bienvenue dans CY Patrimoine test</h1>
             </div>
-        </nav>
 
-        <main>
 
-            <div id="page_main" class="page">
-                <div class="spacer-top"></div>
-                <div class="head red">
-                    <h1>Bienvenue dans CY Patrimoine test</h1>
-                </div>
-    
-    
-                <div id="main" class="container">
-                    <h2>Please select your option</h2>
-                    <button onclick="openRegistryPage();">
-                        Open registry
-                    </button>
-                    <button onclick="openRecordPage();">
-                        Add a new record
-                    </button>
-                    <h1 id="result"></h1>
-                    <div id="registry_page" style="display: none;">
-                        <div style="">
-                            <h3>Please enter the record ID:</h3><br />
-                            <input id="recordId" type="text" placeholder="ex. #I487X">
-                            <button onclick="searchByRecord(document.getElementById('recordId').value);">Search</button>
+            <div id="main" class="container">
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="page_dashboard" class="page">
+            <h1>Votre patrimoine : </h1>
+            <div class="row">
+                <div class="gauche">
+                    <h2>Bancaire : </h2>
+                    <div class="card">
+                        <div class="top">PEA</div>
+                        <div class="body">
+                            <p class="name">Banque : <span class="value">Boursorama Banque</span></p>
+                            <p class="account">Compte N° : <span class="value">984-6512358-45616</span></p>
+                            <p class="action">AAPL : <span class="value">125 actions</span></p>
+                            <p class="action">TSLA : <span class="value">330 actions</span></p>
                         </div>
                     </div>
-                    <div id="add_registry_record" style="display: none;">
-                        test 2
+
+                    <div class="card">
+                        <div class="top">Compte en devises</div>
+                        <div class="body">
+                            <p class="name">Banque : <span class="value">Boursorama Banque</span></p>
+                            <p class="account">Compte N° : <span class="value">984-276598-13245</span></p>
+                            <p class="action">Taux : <span class="value">3%</span></p>
+                            <p class="action">Solde : <span class="value">465 312,42 €</span></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="droite">
+                    <h2>Digital : </h2>
+                    <div class="card">
+                        <div class="top">
+                            NFT
+                        </div>
+                        <div class="body">
+                            <p class="name">Nom : <span class="value"> Bored Ape</span></p>
+                            <p class="hash">Hash : <span class="value">63a9f0ea7bb98050796b649e85481845</span></p>
+                        </div>
                     </div>
                 </div>
-
             </div>
 
 
-            <div id="page_dashboard" class="page">
-                <h2>Coucou c'est le dashboard de la richesse</h2>
+        </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+            function toggleButtonsControl(cssSelector){
+                let allButtons = document.querySelectorAll(".select2");
+                allButtons.forEach( button => {
+                    button.style.display = "none";}
+                );
+                toggleDisplay(cssSelector);
+            }
+
+            function toggleDisplay(cssSelector){
+                let element = document.querySelector(cssSelector);
+                if(element.style.display == "block"){
+                    element.style.display = "none";
+                }else{
+                    element.style.display = "block";
+                }
+            }
+
+            function toggleForm(cssSelector){
+                let allForms = document.querySelectorAll('.form-root');
+                allForms.forEach(form => {
+                    form.style.display = "none";
+                });
+
+                toggleDisplay(cssSelector);
+            }
+
+            function test(){
+                machin = updateRecords();
+                console.log(machin);
+            }
+        </script>
+
+        <div id="page_ajout" class="page">
+            <button class="bouton" onclick="toggleButtonsControl('.bank_part2')">Ajouter un compte bancaire</button>
+            <button class="bouton" onclick="toggleButtonsControl('.digital_part2')">Ajouter un compte digital</button>
+
+            <div class="select2 bank_part2">
+                <button class="bouton" onclick="toggleForm('#PEA')">PEA</button>
+                <button class="bouton" onclick="toggleForm('#devises')">Devises</button>
             </div>
-            
 
-        </main>
-    </div>
+            <div class="select2 digital_part2">
+                <button class="bouton" onclick="toggleForm('#NFT')">NFT</button>
+                <button class="bouton" onclick="toggleForm('#cryptoCurrency')">Cryptomonnaie</button>
+            </div>
+
+
+            <form id="PEA" class="form-root">
+                <div class="form-element">
+                    <label for="bankName">Nom de la banque : <br></label>
+                    <input type="text" name="bankName" id="bankName" required><br>
+                </div>
+
+                <div class="form-element">
+                    <label for="bankAccountID">Identifiant du compte : <br></label>
+                    <input type="text" name="bankAccountID" id="bankAccountID" required> <br>
+                </div>
+
+                <div class="form-element">
+                    <label for="labelAction">Code de l'action : <br></label>
+                    <input type="text" name="labelAction" id="labelAction" required> <br>
+                </div>
+
+                <div class="form-element">
+                    <label for="actionNombre"> Nombre d'actions :<br> </label>
+                    <input type="number" name="actionNombre" id="actionNombre" min="0" required><br>
+                </div>
+
+                <button class="bouton bouton-vert">Ajouter ce compte</button>
+            </form>
+
+
+            <form id="devises" class="form-root">
+                <div class="form-element">
+                    <label for="bankName">Nom de la banque : <br></label>
+                    <input type="text" name="bankName" id="bankName" required><br>
+                </div>
+
+                <div class="form-element">
+                    <label for="bankAccountID">Identifiant du compte : <br></label>
+                    <input type="text" name="bankAccountID" id="bankAccountID" required> <br>
+                </div>
+
+                <div class="form-element">
+                    <label for="solde"> Taux annuel :<br> </label>
+                    <input type="number" name="solde" id="solde" min="0" required><br>
+                </div>
+
+                <div class="form-element">
+                    <label for="solde"> Solde du compte :<br> </label>
+                    <input type="number" name="solde" id="solde" min="0" required><br>
+                </div>
+
+                <button class="bouton bouton-vert">Ajouter ce compte</button>
+            </form>
+
+            <form id="NFT" class="form-root">
+                <div class="form-element">
+                    <label for="nftName">Nom du NFT : <br></label>
+                    <input type="text" name="nftName" id="nftName" required><br>
+                </div>
+
+                <div class="form-element">
+                    <label for="nftHash">Hash du NFT : <br></label>
+                    <input type="text" name="nftHash" id="nftHash" required><br>
+                </div>
+
+                <button class="bouton bouton-vert">Ajouter un NFT</button>
+            </form>
+
+            <form id="cryptoCurrency" class="form-root">
+                <div class="form-element">
+                    <label for="cryptoCode">Code monnaie de la Cryptomonnaie : <br></label>
+                    <input type="text" name="cryptoCode" id="cryptoCode" required><br>
+                </div>
+
+                <div class="form-element">
+                    <label for="cryptoAmount">Quantité détenue : <br></label>
+                    <input type="number" name="cryptoAmount" id="cryptoAmount" min="0" required><br>
+                </div>
+                <button class="bouton bouton-vert">Ajouter une cryptomonnaie</button>
+            </form>
+        </div>
+
+    </main>
+</div>
+
 </body>
 
 </html>
