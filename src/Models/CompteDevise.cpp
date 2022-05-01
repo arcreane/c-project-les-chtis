@@ -17,13 +17,13 @@ CompteDevise::CompteDevise(int amount, int rate, int ceiling, string accountId, 
 }
 
 int CompteDevise::getCeiling() {
-    return this->ceiling;
+    return ceiling;
 }
 
 int CompteDevise::getRate() {
-    return this->rate;
+    return rate;
 }
 
 int CompteDevise::getAmount() {
-    return this->amount;
+    return amount;
 }

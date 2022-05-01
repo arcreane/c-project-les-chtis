@@ -119,7 +119,7 @@ JSValueRef openRegistryPage(JSContextRef ctx, JSObjectRef function,
     return JSValueMakeNull(ctx);
 }
 
-void updateRecords(){
+JSValue MyApp::updateRecords(){
 
     DataLoader dataLoader;
 
@@ -130,15 +130,62 @@ void updateRecords(){
     std::list<Nft> nfts = dataLoader.getNfts();
     std::list<CompteDevise> compteDevises = dataLoader.getComptesDevises();
 
-    string htmlPart = "<div>";
+    string htmlPart = "<div class=\"row\"><div class=\"gauche\"><h2>Bancaire : </h2>";
+
+
     for(PEA pea : peas){
-        string part = "<h1>" + pea.getName() + "</h1>" + "<br/>"+
-                "<h1>" + to_string(pea.getBalance()) + "</h1>";
+        string part ="<div class=\"card\">";
+        part += "<div class=\"top\">" + pea.getName() + "</div>";
+        part += "<div class=\"body\">";
+        part += "<p class=\"name\"> Banque : <span class=\"value\">"+pea.getProviderName() + "</span> </p>";
+        part += "<p class=\"name\">Actions :  <span class=\"value\">"+pea.getOrders() + "</span> </p>";
+        part += "</div> </div>";
+
+        htmlPart+=part;
+    }
+
+    for (CompteDevise cpt : compteDevises){
+        string part ="<div class=\"card\">";
+        part += "<div class=\"top\">" + cpt.getName() + "</div>";
+        part += "<div class=\"body\">";
+        part += "<p class=\"name\"> Banque : <span class=\"value\">"+cpt.getProviderName() + "</span> </p>";
+        part += "<p class=\"name\"> Taux :  <span class=\"value\">"+std::to_string(cpt.getRate()) + "</span> </p>";
+        part += "<p class=\"name\"> Solde :  <span class=\"value\">"+std::to_string(cpt.getAmount()) + "</span> </p>";
+        part += "</div> </div>";
 
         htmlPart+=part;
     }
     htmlPart+="</div>";
+    htmlPart+="<div class=\"droite\"><h2>Digital : </h2>";
+
+    for (CryptoCurrency crypto : cryptoCurrencies){
+        string part ="<div class=\"card\">";
+        part += "<div class=\"top\">" + crypto.getName() + "</div>";
+        part += "<div class=\"body\">";
+        part += "<p class=\"name\"> Code monnaie : <span class=\"value\">"+ crypto.getToken() + "</span> </p>";
+        part += "<p class=\"name\"> Solde :  <span class=\"value\">"+ std::to_string(crypto.getBalance()) + "</span> </p>";
+        part += "</div> </div>";
+
+        htmlPart+=part;
+    }
+
+    for(Nft nft : nfts){
+        string part ="<div class=\"card\">";
+        part += "<div class=\"top\">" + nft.getName() + "</div>";
+        part += "<div class=\"body\">";
+        part += "<p class=\"name\"> Nom : <span class=\"value\">"+ nft.getName() + "</span> </p>";
+        part += "<p class=\"name\"> Seller :  <span class=\"value\">"+nft.getProviderName() + "</span> </p>";
+        part += "<p class=\"name\"> Cote :  <span class=\"value\">"+ nft.getCurrentCote()  + "</span> </p>";
+        part += "</div> </div>";
+
+        htmlPart+=part;
+    }
+
+    htmlPart+= "</div></div>";
+
+    return JSValue(&htmlPart);
 }
+
 
 JSValueRef openRecordPage(JSContextRef ctx, JSObjectRef function,
                           JSObjectRef thisObject, size_t argumentCount,

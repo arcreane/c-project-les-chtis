@@ -14,7 +14,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <unistd.h>
+#include <io.h>
 #include <sstream>
 #include "../../../rapidjson/document.h"
 #include "../../../rapidjson/writer.h"

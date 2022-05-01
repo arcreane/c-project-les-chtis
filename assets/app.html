@@ -314,24 +314,7 @@
 
 
             <div id="main" class="container">
-                <h2>Please select your option</h2>
-                <button onclick="openRegistryPage();">
-                    Open registry
-                </button>
-                <button onclick="openRecordPage();">
-                    Add a new record
-                </button>
-                <h1 id="result"></h1>
-                <div id="registry_page" style="display: none;">
-                    <div style="">
-                        <h3>Please enter the record ID:</h3><br />
-                        <input id="recordId" type="text" placeholder="ex. #I487X">
-                        <button onclick="searchByRecord(document.getElementById('recordId').value);">Search</button>
-                    </div>
-                </div>
-                <div id="add_registry_record" style="display: none;">
-                    test 2
-                </div>
+
             </div>
 
         </div>
@@ -437,6 +420,11 @@
                 });
 
                 toggleDisplay(cssSelector);
+            }
+
+            function test(){
+                machin = updateRecords();
+                console.log(machin);
             }
         </script>
 
