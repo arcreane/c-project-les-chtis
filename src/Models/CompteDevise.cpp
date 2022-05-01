@@ -3,18 +3,23 @@
 //
 #include "CompteDevise.h"
 #include "BankProduct.h"
+#include <string>
 
-CompteDevice::CompteDevice(int rate, int ceiling, string accountId, string name, string createdAt, string updatedAt,
+using std::string;
+
+CompteDevise::CompteDevise(int amount, int rate, int ceiling, string accountId, string name, string createdAt,
+                           string updatedAt,
                            string providerName) : BankProduct(name, accountId, createdAt, updatedAt, providerName) {
 
     this->ceiling = ceiling;
     this->rate = rate;
+    this->amount = amount;
 }
 
-int CompteDevice::getCeiling() {
+int CompteDevise::getCeiling() {
     return this->ceiling;
 }
 
-int CompteDevice::getRate() {
+int CompteDevise::getRate() {
     return this->rate;
 }

@@ -1,0 +1,42 @@
+{
+  "type": "Product",
+  "elements": [
+    {
+      "type": "BankProduct",
+      "elements": [
+        {
+          "type": "CompteDevise",
+          "elements": [
+            {
+              "ceiling": 1400,
+              "rate": 12,
+              "amount": 1000,
+              "accountId": "A82jif32j9",
+              "name": "CD_018",
+              "createdAt": "12/04/2022",
+              "updatedAt": "12/04/2022"
+            },
+            {
+              "ceiling": 1200,
+              "rate": 14,
+              "amount": 800,
+              "accountId": "A82jif32j9",
+              "name": "CD_018",
+              "createdAt": "12/04/2022",
+              "updatedAt": "12/04/2022"
+            },
+            {
+              "ceiling": 2000,
+              "rate": 6,
+              "amount": 600,
+              "accountId": "A82jif32j9",
+              "name": "CD_018",
+              "createdAt": "12/04/2022",
+              "updatedAt": "12/04/2022"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

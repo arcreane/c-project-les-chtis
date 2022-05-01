@@ -1,8 +1,15 @@
 #include "MyApp.h"
 #include <iostream>
-
-#define WINDOW_WIDTH  600
-#define WINDOW_HEIGHT 400
+#include "Models/PEA.h"
+#define WINDOW_WIDTH  1280
+#define WINDOW_HEIGHT 720
+#include "../rapidjson/document.h"
+#include "../rapidjson/writer.h"
+#include "../rapidjson/stringbuffer.h"
+#include <fstream>
+#include "Utils/DataLoader/DataLoader.cpp"
+using namespace std;
+using namespace rapidjson;
 
 MyApp::MyApp() {
     ///
@@ -56,6 +63,11 @@ MyApp::MyApp() {
     /// View's OnChangeCursor and OnChangeTitle events below.
     ///
     overlay_->view()->set_view_listener(this);
+
+
+    DataLoader dataLoader;
+
+    dataLoader.loadInProducts();
 }
 
 MyApp::~MyApp() {

@@ -5,8 +5,6 @@
 #ifndef MYAPP_BANKPRODUCT_H
 #define MYAPP_BANKPRODUCT_H
 
-#endif //MYAPP_BANKPRODUCT_H
-
 #include "Product.h"
 
 class BankProduct: public Product{
@@ -19,3 +17,5 @@ public:
     void addBalance(int amount);
     int getBalance();
 };
+
+#endif //MYAPP_BANKPRODUCT_H

@@ -5,8 +5,6 @@
 #ifndef MYAPP_PEA_H
 #define MYAPP_PEA_H
 
-#endif //MYAPP_PEA_H
-
 #include <iostream>
 #include <list>
 #include "BankProduct.h"
@@ -19,3 +17,5 @@ public:
     void addOrder(string order);
     std::list<string> getOrders();
 };
+
+#endif //MYAPP_PEA_H
