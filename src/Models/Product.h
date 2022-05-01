@@ -8,7 +8,7 @@
 #ifndef MYAPP_PRODUCT_H
 #define MYAPP_PRODUCT_H
 
-#endif //MYAPP_PRODUCT_H
+using namespace rapidjson;
 using namespace std;
 class Product{
 private:
@@ -23,3 +23,4 @@ public:
     string getUpdatedAt();
     string getProviderName();
 };
+#endif //MYAPP_PRODUCT_H
