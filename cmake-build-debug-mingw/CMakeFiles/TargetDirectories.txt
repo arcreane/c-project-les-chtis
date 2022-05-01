@@ -1,0 +1,4 @@
+C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/UltralightSDK.dir
+C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/CYPatrimoine.dir
+C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/ALL_BUILD.dir
+C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/ZERO_CHECK.dir

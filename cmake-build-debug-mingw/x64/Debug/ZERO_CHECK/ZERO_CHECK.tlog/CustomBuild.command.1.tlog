@@ -1,0 +1,10 @@
+^C:\USERS\CYTECH STUDENT\CLIONPROJECTS\PROJECT\CMAKE-BUILD-DEBUG-MINGW\CMAKEFILES\77FEF49A829AD4EE5E3A5E075D82A0DB\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" "-SC:/Users/CYTech Student/CLionProjects/project" "-BC:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CYPatrimoine.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,5 @@
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -G "Visual Studio 17 2022" "C:\Users\CYTech Student\CLionProjects\project"
+-- Selecting Windows SDK version 10.0.19041.0 to target Windows 10.0.19044.
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw

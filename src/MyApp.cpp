@@ -120,7 +120,9 @@ JSValueRef openRegistryPage(JSContextRef ctx, JSObjectRef function,
     return JSValueMakeNull(ctx);
 }
 
-JSValue MyApp::updateRecords(){
+JSValueRef updateRecords(JSContextRef ctx, JSObjectRef function,
+                         JSObjectRef thisObject, size_t argumentCount,
+                         const JSValueRef arguments[], JSValueRef *exception){
 
     DataLoader dataLoader;
 
@@ -183,8 +185,10 @@ JSValue MyApp::updateRecords(){
     }
 
     htmlPart+= "</div></div>";
+    const char *formatted = htmlPart.data();
+    JSString str(formatted);
 
-    return JSValue(&htmlPart);
+    return JSValueMakeString(ctx,str);
 }
 
 
@@ -226,12 +230,14 @@ void MyApp::OnDOMReady(ultralight::View *caller,
     //
     RefPtr<JSContext> context = caller->LockJSContext();
 
+
     // Get the underlying JSContextRef for use with the
     // JavaScriptCore C API.
     JSContextRef ctx = context->ctx();
     SetListener(ctx, "openRegistryPage", openRegistryPage);
     SetListener(ctx, "openRecordPage", openRecordPage);
     SetListener(ctx, "searchByRecord", searchByRecord);
+    SetListener(ctx,"updateRecords",updateRecords);
 
     //this->updateRecords();
 }

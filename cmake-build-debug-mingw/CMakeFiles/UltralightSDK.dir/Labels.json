@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/UltralightSDK"
+		},
+		{
+			"file" : "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/77fef49a829ad4ee5e3a5e075d82a0db/UltralightSDK.rule"
+		},
+		{
+			"file" : "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/bd2676d75dd72d6b1e8d6460eadeed04/UltralightSDK-complete.rule"
+		},
+		{
+			"file" : "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/9a51bf93f75c36edb238d30000f9190b/UltralightSDK-build.rule"
+		},
+		{
+			"file" : "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/9a51bf93f75c36edb238d30000f9190b/UltralightSDK-configure.rule"
+		},
+		{
+			"file" : "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/9a51bf93f75c36edb238d30000f9190b/UltralightSDK-download.rule"
+		},
+		{
+			"file" : "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/9a51bf93f75c36edb238d30000f9190b/UltralightSDK-install.rule"
+		},
+		{
+			"file" : "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/9a51bf93f75c36edb238d30000f9190b/UltralightSDK-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/9a51bf93f75c36edb238d30000f9190b/UltralightSDK-patch.rule"
+		},
+		{
+			"file" : "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/9a51bf93f75c36edb238d30000f9190b/UltralightSDK-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"UltralightSDK"
+		],
+		"name" : "UltralightSDK"
+	}
+}
