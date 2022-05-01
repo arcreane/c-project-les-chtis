@@ -35,6 +35,61 @@
               "updatedAt": "12/04/2022"
             }
           ]
+        },
+        {
+          "type": "PEA",
+          "elements": [
+            {
+              "name": "PEA_416521-653",
+              "accountId": "5454-471",
+              "values": "AAPL : 150, TSLA 125",
+              "createdAt": "12/04/2022",
+              "updatedAt": "12/04/2022"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "type" : "DigitalProducts",
+      "elements": [
+        {
+          "type": "CryptoCurrency",
+          "elements": [
+            {
+              "currencyCode" : "BTC",
+              "currencyName" : "Bitcoin",
+              "amount" : 150,
+              "createdAt": "12/04/2022",
+              "updatedAt": "12/04/2022"
+            },
+            {
+              "currencyCode" : "ETH",
+              "currencyName" : "Ethereum",
+              "amount" : 40,
+              "createdAt": "12/04/2022",
+              "updatedAt": "12/04/2022"
+            },
+            {
+              "currencyCode" : "XRP",
+              "currencyName" : "Ripple",
+              "amount" : 40000,
+              "createdAt": "12/04/2022",
+              "updatedAt": "12/04/2022"
+            }
+          ]
+        },
+        {
+          "type": "NFT",
+          "elements": [
+            {
+              "cote": 121654,
+              "seller": "Joe Biden",
+              "createdAt": "12/04/2022",
+              "updatedAt": "12/04/2022"
+            }
+          ]
         }
       ]
     }
