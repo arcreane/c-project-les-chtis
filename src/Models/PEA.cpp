@@ -12,9 +12,9 @@ PEA::PEA(string bankName, string accountId, string createdAt, string updatedAt, 
 }
 
 void PEA::addOrder(string order) {
-    this->values.push_back(order);
+    this->values = this->values + "," + order;
 }
 
-std::list<string> PEA::getOrders() {
+string PEA::getOrders() {
     return this->values;
 }

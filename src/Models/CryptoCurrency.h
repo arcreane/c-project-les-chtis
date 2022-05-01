@@ -14,7 +14,7 @@ private:
     int amount;
 
 public:
-    CryptoCurrency(string currencyCode, string currencyName, string createdAt, string updatedAt, string providerName);
+    CryptoCurrency(int amount, string currencyCode, string currencyName, string createdAt, string updatedAt, string providerName);
     int getBalance();
     string getCurrencyName();
 

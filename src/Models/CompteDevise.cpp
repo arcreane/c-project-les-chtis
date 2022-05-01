@@ -23,3 +23,7 @@ int CompteDevise::getCeiling() {
 int CompteDevise::getRate() {
     return this->rate;
 }
+
+int CompteDevise::getAmount() {
+    return this->amount;
+}

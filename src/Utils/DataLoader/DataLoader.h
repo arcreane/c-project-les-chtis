@@ -21,6 +21,9 @@ private:
     string path;
     string readFileIntoString();
     CompteDevise toProductCompteDevise(Value& v);
+    PEA toProductPEA(Value& v);
+    Nft toProductNFT(Value &v);
+    CryptoCurrency toProductCryptoCurrency(Value &v);
     std::list<CompteDevise> comptesDevise;
     std::list<CryptoCurrency> cryptoCurrencies;
     std::list<Nft> nfts;
@@ -30,6 +33,7 @@ public:
     DataLoader();
     bool loadInProducts();
     void addProduct(string type, string subType, Value& element);
+    std::list<PEA> getPeas();
 };
 
 

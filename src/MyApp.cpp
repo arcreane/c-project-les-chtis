@@ -17,6 +17,12 @@ MyApp::MyApp() {
     ///
     app_ = App::Create();
 
+    DataLoader dataLoader;
+
+    dataLoader.loadInProducts();
+
+    std::list<PEA> peas = dataLoader.getPeas();
+
     ///
     /// Create a resizable window by passing by OR'ing our window flags with
     /// kWindowFlags_Resizable.
@@ -64,10 +70,6 @@ MyApp::MyApp() {
     ///
     overlay_->view()->set_view_listener(this);
 
-
-    DataLoader dataLoader;
-
-    dataLoader.loadInProducts();
 }
 
 MyApp::~MyApp() {

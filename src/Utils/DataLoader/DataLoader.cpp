@@ -3,13 +3,13 @@
 //
 
 #include "DataLoader.h"
-#include "../../Models/Product.h"
-#include "../../Models/BankProduct.h"
-#include "../../Models/DigitalProduct.h"
-#include "../../Models/CompteDevise.h"
-#include "../../Models/CryptoCurrency.h"
-#include "../../Models/Nft.h"
-#include "../../Models/PEA.h"
+#include "../../Models/Product.cpp"
+#include "../../Models/BankProduct.cpp"
+#include "../../Models/DigitalProduct.cpp"
+#include "../../Models/CompteDevise.cpp"
+#include "../../Models/CryptoCurrency.cpp"
+#include "../../Models/Nft.cpp"
+#include "../../Models/PEA.cpp"
 #include <cstdlib>
 #include <iostream>
 #include <fstream>
@@ -43,25 +43,25 @@ string DataLoader::readFileIntoString() {
 }
 
 bool DataLoader::loadInProducts() {
-    try{
+    try {
         string json_product = this->readFileIntoString();
-        const char* formatted = json_product.data();
+        const char *formatted = json_product.data();
         Document doc;
         doc.Parse(formatted);
-        if(doc.HasMember("type") && doc.HasMember("elements")){
-            Value& productElements = doc["elements"];
-            if(productElements.IsArray()){
-                for (Value& v : productElements.GetArray()){
-                    if(v.HasMember("type") && v.HasMember("elements")){
+        if (doc.HasMember("type") && doc.HasMember("elements")) {
+            Value &productElements = doc["elements"];
+            if (productElements.IsArray()) {
+                for (Value &v: productElements.GetArray()) {
+                    if (v.HasMember("type") && v.HasMember("elements")) {
                         string globalType = v["type"].GetString();
-                        Value& subProductElements = v["elements"];
-                        if(subProductElements.IsArray()){
-                            for(Value& v2 : subProductElements.GetArray()){
-                                if(v2.HasMember("type") && v2.HasMember("elements")) {
+                        Value &subProductElements = v["elements"];
+                        if (subProductElements.IsArray()) {
+                            for (Value &v2: subProductElements.GetArray()) {
+                                if (v2.HasMember("type") && v2.HasMember("elements")) {
                                     string subType = v2["type"].GetString();
-                                    Value& finalProductElements = v2["elements"];
-                                    if(finalProductElements.IsArray()){
-                                        for(Value& v3: finalProductElements.GetArray()){
+                                    Value &finalProductElements = v2["elements"];
+                                    if (finalProductElements.IsArray()) {
+                                        for (Value &v3: finalProductElements.GetArray()) {
                                             this->addProduct(globalType, subType, v3);
                                         }
                                     }
@@ -75,24 +75,34 @@ bool DataLoader::loadInProducts() {
         }
 
         return true;
-    }catch(int err){
+    } catch (int err) {
         cerr << "ERROR " << err;
     }
 
 }
 
-void DataLoader::addProduct(string type, string subType, Value& element){
+std::list<PEA> DataLoader::getPeas() {
+    return this->peas;
+}
 
-    if(type == "BankProduct"){
-        if(subType == "CompteDevise"){
-          //  CompteDevise cd = this->toProductCompteDevise(element);
-            //this->comptesDevice.push_back(cd);
-        }
-        else if(subType == "PEA"){
+void DataLoader::addProduct(string type, string subType, Value &element) {
 
+    if (type == "BankProduct") {
+        if (subType == "CompteDevise") {
+            CompteDevise cd = this->toProductCompteDevise(element);
+            this->comptesDevise.push_back(cd);
+        } else if (subType == "PEA") {
+            PEA pea = this->toProductPEA(element);
+            this->peas.push_back(pea);
         }
-    }
-    else if(type == "DigitalProduct"){
+    } else if (type == "DigitalProduct") {
+        if (subType == "NFT") {
+            Nft nft = this->toProductNFT(element);
+            this->nfts.push_back(nft);
+        }else if(subType == "CryptoCurrency"){
+            CryptoCurrency ccr = this->toProductCryptoCurrency(element);
+            this->cryptoCurrencies.push_back(ccr);
+        }
 
     }
 }
@@ -107,4 +117,37 @@ CompteDevise DataLoader::toProductCompteDevise(Value &v) {
     string updatedAt = v["updatedAt"].GetString();
     CompteDevise cd(amount, rate, ceiling, accountId, name, createdAt, updatedAt, "LOCAL_PROVIDER");
     return cd;
+}
+
+PEA DataLoader::toProductPEA(Value &v) {
+    string values = v["values"].GetString();
+    string accountId = v["accountId"].GetString();
+    string name = v["name"].GetString();
+    string createdAt = v["createdAt"].GetString();
+    string updatedAt = v["updatedAt"].GetString();
+
+    PEA pea(name, accountId, createdAt, updatedAt, "PEA_PROVIDER");
+    pea.addOrder(values);
+    return pea;
+}
+
+Nft DataLoader::toProductNFT(Value &v) {
+    string currentCote = v["currentCote"].GetString();
+    string seller = v["seller"].GetString();
+    string createdAt = v["createdAt"].GetString();
+    string updatedAt = v["updatedAt"].GetString();
+
+    Nft nft(seller, currentCote, createdAt, updatedAt, "NFT_PROVIDER");
+    return nft;
+}
+
+CryptoCurrency DataLoader::toProductCryptoCurrency(Value &v){
+    string currencyCode = v["currencyCode"].GetString();
+    string currencyName = v["currencyName"].GetString();
+    int amount = v["amount"].GetInt();
+    string createdAt = v["createdAt"].GetString();
+    string updatedAt = v["updatedAt"].GetString();
+
+    CryptoCurrency cc(amount, currencyCode, currencyName, createdAt, updatedAt, "CRYPTO_PROVIDER");
+    return cc;
 }
