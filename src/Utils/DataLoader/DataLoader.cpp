@@ -29,7 +29,7 @@ using std::ifstream; using std::ostringstream;
 using namespace rapidjson;
 
 DataLoader::DataLoader() {
-    path = "../Resources/assets/Resources/Data.json";
+    path = "assets/resources/Data.json";
 }
 
 string DataLoader::readFileIntoString() {
@@ -108,16 +108,13 @@ void DataLoader::addProduct(string type, string subType, Value &element) {
         } else if (subType == "PEA") {
             PEA pea = this->toProductPEA(element);
             this->peas.push_back(pea);
-        }
-    } else if (type == "DigitalProduct") {
-        if (subType == "NFT") {
+        }else if (subType == "NFT") {
             Nft nft = this->toProductNFT(element);
             this->nfts.push_back(nft);
         }else if(subType == "CryptoCurrency"){
             CryptoCurrency ccr = this->toProductCryptoCurrency(element);
             this->cryptoCurrencies.push_back(ccr);
         }
-
     }
 }
 
@@ -146,7 +143,7 @@ PEA DataLoader::toProductPEA(Value &v) {
 }
 
 Nft DataLoader::toProductNFT(Value &v) {
-    string currentCote = v["currentCote"].GetString();
+    string currentCote = v["cote"].GetString();
     string seller = v["seller"].GetString();
     string createdAt = v["createdAt"].GetString();
     string updatedAt = v["updatedAt"].GetString();

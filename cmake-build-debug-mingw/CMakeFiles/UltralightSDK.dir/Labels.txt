@@ -1,0 +1,13 @@
+# Target labels
+ UltralightSDK
+# Source files and their labels
+C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/UltralightSDK
+C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/77fef49a829ad4ee5e3a5e075d82a0db/UltralightSDK.rule
+C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/bd2676d75dd72d6b1e8d6460eadeed04/UltralightSDK-complete.rule
+C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/9a51bf93f75c36edb238d30000f9190b/UltralightSDK-build.rule
+C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/9a51bf93f75c36edb238d30000f9190b/UltralightSDK-configure.rule
+C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/9a51bf93f75c36edb238d30000f9190b/UltralightSDK-download.rule
+C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/9a51bf93f75c36edb238d30000f9190b/UltralightSDK-install.rule
+C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/9a51bf93f75c36edb238d30000f9190b/UltralightSDK-mkdir.rule
+C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/9a51bf93f75c36edb238d30000f9190b/UltralightSDK-patch.rule
+C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/9a51bf93f75c36edb238d30000f9190b/UltralightSDK-update.rule

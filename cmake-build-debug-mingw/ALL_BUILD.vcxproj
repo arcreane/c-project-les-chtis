@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{631F9DD6-6EB1-3EAD-9320-7703300FD368}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\SDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\SDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\SDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\SDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\CYTech Student\CLionProjects\project\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/CYTech Student/CLionProjects/project/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" "-SC:/Users/CYTech Student/CLionProjects/project" "-BC:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw" --check-stamp-file "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeCInformation.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeCXXInformation.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeGenericSystem.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeRCInformation.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\ExternalProject-download.cmake.in;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\ExternalProject.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Platform\Windows.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Platform\WindowsPaths.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\RepositoryInfo.txt.in;C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\CMakeFiles\3.21.1\CMakeCCompiler.cmake;C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\CMakeFiles\3.21.1\CMakeCXXCompiler.cmake;C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\CMakeFiles\3.21.1\CMakeRCCompiler.cmake;C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\CMakeFiles\3.21.1\CMakeSystem.cmake;C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\UltralightSDK-prefix\tmp\UltralightSDK-cfgcmd.txt.in;C:\Users\CYTech Student\CLionProjects\project\cmake\App.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/CYTech Student/CLionProjects/project/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" "-SC:/Users/CYTech Student/CLionProjects/project" "-BC:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw" --check-stamp-file "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeCInformation.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeCXXInformation.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeGenericSystem.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeRCInformation.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\ExternalProject-download.cmake.in;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\ExternalProject.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Platform\Windows.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Platform\WindowsPaths.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\RepositoryInfo.txt.in;C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\CMakeFiles\3.21.1\CMakeCCompiler.cmake;C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\CMakeFiles\3.21.1\CMakeCXXCompiler.cmake;C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\CMakeFiles\3.21.1\CMakeRCCompiler.cmake;C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\CMakeFiles\3.21.1\CMakeSystem.cmake;C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\UltralightSDK-prefix\tmp\UltralightSDK-cfgcmd.txt.in;C:\Users\CYTech Student\CLionProjects\project\cmake\App.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/CYTech Student/CLionProjects/project/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" "-SC:/Users/CYTech Student/CLionProjects/project" "-BC:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw" --check-stamp-file "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeCInformation.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeCXXInformation.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeGenericSystem.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeRCInformation.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\ExternalProject-download.cmake.in;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\ExternalProject.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Platform\Windows.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Platform\WindowsPaths.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\RepositoryInfo.txt.in;C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\CMakeFiles\3.21.1\CMakeCCompiler.cmake;C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\CMakeFiles\3.21.1\CMakeCXXCompiler.cmake;C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\CMakeFiles\3.21.1\CMakeRCCompiler.cmake;C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\CMakeFiles\3.21.1\CMakeSystem.cmake;C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\UltralightSDK-prefix\tmp\UltralightSDK-cfgcmd.txt.in;C:\Users\CYTech Student\CLionProjects\project\cmake\App.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/CYTech Student/CLionProjects/project/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" "-SC:/Users/CYTech Student/CLionProjects/project" "-BC:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw" --check-stamp-file "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeCInformation.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeCXXInformation.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeGenericSystem.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeRCInformation.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\ExternalProject-download.cmake.in;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\ExternalProject.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Platform\Windows.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\Platform\WindowsPaths.cmake;C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\RepositoryInfo.txt.in;C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\CMakeFiles\3.21.1\CMakeCCompiler.cmake;C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\CMakeFiles\3.21.1\CMakeCXXCompiler.cmake;C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\CMakeFiles\3.21.1\CMakeRCCompiler.cmake;C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\CMakeFiles\3.21.1\CMakeSystem.cmake;C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\UltralightSDK-prefix\tmp\UltralightSDK-cfgcmd.txt.in;C:\Users\CYTech Student\CLionProjects\project\cmake\App.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\ZERO_CHECK.vcxproj">
+      <Project>{F2A8D345-835E-36E0-882D-967C23165407}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\CYPatrimoine.vcxproj">
+      <Project>{0475DDF0-F9A1-3A8C-9A1D-E5205C89818A}</Project>
+      <Name>CYPatrimoine</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\UltralightSDK.vcxproj">
+      <Project>{830C828A-9FC0-318E-9C49-7609936FF249}</Project>
+      <Name>UltralightSDK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

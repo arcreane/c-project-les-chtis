@@ -43,7 +43,6 @@ public:
   virtual void OnChangeTitle(ultralight::View* caller,
     const String& title) override;
 
-    JSValue updateRecords();
 
 protected:
   RefPtr<App> app_;

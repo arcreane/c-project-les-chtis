@@ -253,6 +253,10 @@
         }
 
 
+        #page_dashboard{
+            overflow: scroll;
+        }
+
     </style>
 </head>
 
@@ -271,7 +275,7 @@
         </div>
 
         <div class="nav-root">
-            <a href="#page_dashboard">
+            <a href="#page_dashboard" onclick="chargerDonneesJSON()">
                 <div class="nav-content">
                     <div class="nav-link">
                         <i class="fas fa-wallet"></i>
@@ -338,39 +342,41 @@
 
         <div id="page_dashboard" class="page">
             <h1>Votre patrimoine : </h1>
-            <div class="row">
-                <div class="gauche">
-                    <h2>Bancaire : </h2>
-                    <div class="card">
-                        <div class="top">PEA</div>
-                        <div class="body">
-                            <p class="name">Banque : <span class="value">Boursorama Banque</span></p>
-                            <p class="account">Compte N° : <span class="value">984-6512358-45616</span></p>
-                            <p class="action">AAPL : <span class="value">125 actions</span></p>
-                            <p class="action">TSLA : <span class="value">330 actions</span></p>
+            <div class="dash_container">
+                <div class="row">
+                    <div class="gauche">
+                        <h2>Bancaire : </h2>
+                        <div class="card">
+                            <div class="top">PEA</div>
+                            <div class="body">
+                                <p class="name">Banque : <span class="value">Boursorama Banque</span></p>
+                                <p class="account">Compte N° : <span class="value">984-6512358-45616</span></p>
+                                <p class="action">AAPL : <span class="value">125 actions</span></p>
+                                <p class="action">TSLA : <span class="value">330 actions</span></p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="card">
-                        <div class="top">Compte en devises</div>
-                        <div class="body">
-                            <p class="name">Banque : <span class="value">Boursorama Banque</span></p>
-                            <p class="account">Compte N° : <span class="value">984-276598-13245</span></p>
-                            <p class="action">Taux : <span class="value">3%</span></p>
-                            <p class="action">Solde : <span class="value">465 312,42 €</span></p>
+                        <div class="card">
+                            <div class="top">Compte en devises</div>
+                            <div class="body">
+                                <p class="name">Banque : <span class="value">Boursorama Banque</span></p>
+                                <p class="account">Compte N° : <span class="value">984-276598-13245</span></p>
+                                <p class="action">Taux : <span class="value">3%</span></p>
+                                <p class="action">Solde : <span class="value">465 312,42 €</span></p>
+                            </div>
                         </div>
-                    </div>
 
-                </div>
-                <div class="droite">
-                    <h2>Digital : </h2>
-                    <div class="card">
-                        <div class="top">
-                            NFT
-                        </div>
-                        <div class="body">
-                            <p class="name">Nom : <span class="value"> Bored Ape</span></p>
-                            <p class="hash">Hash : <span class="value">63a9f0ea7bb98050796b649e85481845</span></p>
+                    </div>
+                    <div class="droite">
+                        <h2>Digital : </h2>
+                        <div class="card">
+                            <div class="top">
+                                NFT
+                            </div>
+                            <div class="body">
+                                <p class="name">Nom : <span class="value"> Bored Ape</span></p>
+                                <p class="hash">Hash : <span class="value">63a9f0ea7bb98050796b649e85481845</span></p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -422,9 +428,10 @@
                 toggleDisplay(cssSelector);
             }
 
-            function test(){
-                machin = updateRecords();
-                console.log(machin);
+            function chargerDonneesJSON(){
+                let machin = updateRecords();
+                let container = document.querySelector(".dash_container");
+                container.innerHTML = machin;
             }
         </script>
 

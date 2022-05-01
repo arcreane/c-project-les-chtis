@@ -1,0 +1,148 @@
+^C:\USERS\CYTECH STUDENT\CLIONPROJECTS\PROJECT\CMAKE-BUILD-DEBUG-MINGW\CMAKEFILES\9A51BF93F75C36EDB238D30000F9190B\ULTRALIGHTSDK-MKDIR.RULE
+setlocal
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E make_directory "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/SDK/"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E make_directory "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/SDK/"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E make_directory "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/UltralightSDK-prefix"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E make_directory "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/UltralightSDK-prefix/tmp"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E make_directory "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E make_directory "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/UltralightSDK-prefix/src"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E make_directory "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/UltralightSDK-prefix/src/UltralightSDK-stamp"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E touch "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-mkdir"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\CYTECH STUDENT\CLIONPROJECTS\PROJECT\CMAKE-BUILD-DEBUG-MINGW\CMAKEFILES\9A51BF93F75C36EDB238D30000F9190B\ULTRALIGHTSDK-DOWNLOAD.RULE
+setlocal
+cd "C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -P "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/UltralightSDK-prefix/src/UltralightSDK-stamp/download-UltralightSDK.cmake"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -P "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/UltralightSDK-prefix/src/UltralightSDK-stamp/verify-UltralightSDK.cmake"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -P "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/UltralightSDK-prefix/src/UltralightSDK-stamp/extract-UltralightSDK.cmake"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E touch "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-download"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\CYTECH STUDENT\CLIONPROJECTS\PROJECT\CMAKE-BUILD-DEBUG-MINGW\CMAKEFILES\9A51BF93F75C36EDB238D30000F9190B\ULTRALIGHTSDK-UPDATE.RULE
+setlocal
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E touch "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-update"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\CYTECH STUDENT\CLIONPROJECTS\PROJECT\CMAKE-BUILD-DEBUG-MINGW\CMAKEFILES\9A51BF93F75C36EDB238D30000F9190B\ULTRALIGHTSDK-PATCH.RULE
+setlocal
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E touch "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-patch"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\CYTECH STUDENT\CLIONPROJECTS\PROJECT\CMAKE-BUILD-DEBUG-MINGW\CMAKEFILES\9A51BF93F75C36EDB238D30000F9190B\ULTRALIGHTSDK-CONFIGURE.RULE
+setlocal
+cd "C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\SDK"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E touch "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-configure"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\CYTECH STUDENT\CLIONPROJECTS\PROJECT\CMAKE-BUILD-DEBUG-MINGW\CMAKEFILES\9A51BF93F75C36EDB238D30000F9190B\ULTRALIGHTSDK-BUILD.RULE
+setlocal
+cd "C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\SDK"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E touch "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-build"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\CYTECH STUDENT\CLIONPROJECTS\PROJECT\CMAKE-BUILD-DEBUG-MINGW\CMAKEFILES\9A51BF93F75C36EDB238D30000F9190B\ULTRALIGHTSDK-INSTALL.RULE
+setlocal
+cd "C:\Users\CYTech Student\CLionProjects\project\cmake-build-debug-mingw\SDK"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E touch "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-install"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\CYTECH STUDENT\CLIONPROJECTS\PROJECT\CMAKE-BUILD-DEBUG-MINGW\CMAKEFILES\BD2676D75DD72D6B1E8D6460EADEED04\ULTRALIGHTSDK-COMPLETE.RULE
+setlocal
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E make_directory "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/Debug"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E touch "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/Debug/UltralightSDK-complete"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E touch "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-done"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\CYTECH STUDENT\CLIONPROJECTS\PROJECT\CMAKE-BUILD-DEBUG-MINGW\CMAKEFILES\77FEF49A829AD4EE5E3A5E075D82A0DB\ULTRALIGHTSDK.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\CYTECH STUDENT\CLIONPROJECTS\PROJECT\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" "-SC:/Users/CYTech Student/CLionProjects/project" "-BC:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw" --check-stamp-file "C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,28 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/JetBrains/CLion 2021.3.4/bin/cmake/win/share/cmake-3.21/Modules/CMakeCInformation.cmake
+C:/Program Files/JetBrains/CLion 2021.3.4/bin/cmake/win/share/cmake-3.21/Modules/CMakeCXXInformation.cmake
+C:/Program Files/JetBrains/CLion 2021.3.4/bin/cmake/win/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files/JetBrains/CLion 2021.3.4/bin/cmake/win/share/cmake-3.21/Modules/CMakeGenericSystem.cmake
+C:/Program Files/JetBrains/CLion 2021.3.4/bin/cmake/win/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake
+C:/Program Files/JetBrains/CLion 2021.3.4/bin/cmake/win/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake
+C:/Program Files/JetBrains/CLion 2021.3.4/bin/cmake/win/share/cmake-3.21/Modules/CMakeRCInformation.cmake
+C:/Program Files/JetBrains/CLion 2021.3.4/bin/cmake/win/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake
+C:/Program Files/JetBrains/CLion 2021.3.4/bin/cmake/win/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake
+C:/Program Files/JetBrains/CLion 2021.3.4/bin/cmake/win/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+C:/Program Files/JetBrains/CLion 2021.3.4/bin/cmake/win/share/cmake-3.21/Modules/Compiler/MSVC-C.cmake
+C:/Program Files/JetBrains/CLion 2021.3.4/bin/cmake/win/share/cmake-3.21/Modules/Compiler/MSVC-CXX.cmake
+C:/Program Files/JetBrains/CLion 2021.3.4/bin/cmake/win/share/cmake-3.21/Modules/ExternalProject-download.cmake.in
+C:/Program Files/JetBrains/CLion 2021.3.4/bin/cmake/win/share/cmake-3.21/Modules/ExternalProject.cmake
+C:/Program Files/JetBrains/CLion 2021.3.4/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-MSVC-C.cmake
+C:/Program Files/JetBrains/CLion 2021.3.4/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-MSVC-CXX.cmake
+C:/Program Files/JetBrains/CLion 2021.3.4/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-MSVC.cmake
+C:/Program Files/JetBrains/CLion 2021.3.4/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows.cmake
+C:/Program Files/JetBrains/CLion 2021.3.4/bin/cmake/win/share/cmake-3.21/Modules/Platform/WindowsPaths.cmake
+C:/Program Files/JetBrains/CLion 2021.3.4/bin/cmake/win/share/cmake-3.21/Modules/RepositoryInfo.txt.in
+C:/Users/CYTech Student/CLionProjects/project/CMakeLists.txt
+C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/3.21.1/CMakeCCompiler.cmake
+C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/3.21.1/CMakeCXXCompiler.cmake
+C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/3.21.1/CMakeRCCompiler.cmake
+C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/CMakeFiles/3.21.1/CMakeSystem.cmake
+C:/Users/CYTech Student/CLionProjects/project/cmake-build-debug-mingw/UltralightSDK-prefix/tmp/UltralightSDK-cfgcmd.txt.in
+C:/Users/CYTech Student/CLionProjects/project/cmake/App.cmake
