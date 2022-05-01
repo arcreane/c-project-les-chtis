@@ -34,6 +34,9 @@ public:
     bool loadInProducts();
     void addProduct(string type, string subType, Value& element);
     std::list<PEA> getPeas();
+    std::list<CompteDevise> getComptesDevises();
+    std::list<Nft> getNfts();
+    std::list<CryptoCurrency> getCryptoCurrencies();
 };
 
 

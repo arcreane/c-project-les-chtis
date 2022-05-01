@@ -17,13 +17,6 @@ MyApp::MyApp() {
     ///
     app_ = App::Create();
 
-    DataLoader dataLoader;
-
-    dataLoader.loadInProducts();
-
-    std::list<PEA> peas = dataLoader.getPeas();
-
-    ///
     /// Create a resizable window by passing by OR'ing our window flags with
     /// kWindowFlags_Resizable.
     ///
@@ -126,6 +119,27 @@ JSValueRef openRegistryPage(JSContextRef ctx, JSObjectRef function,
     return JSValueMakeNull(ctx);
 }
 
+void updateRecords(){
+
+    DataLoader dataLoader;
+
+    dataLoader.loadInProducts();
+
+    std::list<PEA> peas = dataLoader.getPeas();
+    std::list<CryptoCurrency> cryptoCurrencies = dataLoader.getCryptoCurrencies();
+    std::list<Nft> nfts = dataLoader.getNfts();
+    std::list<CompteDevise> compteDevises = dataLoader.getComptesDevises();
+
+    string htmlPart = "<div>";
+    for(PEA pea : peas){
+        string part = "<h1>" + pea.getName() + "</h1>" + "<br/>"+
+                "<h1>" + to_string(pea.getBalance()) + "</h1>";
+
+        htmlPart+=part;
+    }
+    htmlPart+="</div>";
+}
+
 JSValueRef openRecordPage(JSContextRef ctx, JSObjectRef function,
                           JSObjectRef thisObject, size_t argumentCount,
                           const JSValueRef arguments[], JSValueRef *exception) {
@@ -171,6 +185,7 @@ void MyApp::OnDOMReady(ultralight::View *caller,
     SetListener(ctx, "openRecordPage", openRecordPage);
     SetListener(ctx, "searchByRecord", searchByRecord);
 
+    this->updateRecords();
 }
 
 void MyApp::SetListener(JSContextRef ctx, char *funName, JSValueRef function(JSContextRef ctx, JSObjectRef function,

@@ -85,6 +85,20 @@ std::list<PEA> DataLoader::getPeas() {
     return this->peas;
 }
 
+std::list<CompteDevise> DataLoader::getComptesDevises() {
+    return this->comptesDevise;
+}
+
+std::list<Nft> DataLoader::getNfts() {
+    return this->nfts;
+}
+
+std::list<CryptoCurrency> DataLoader::getCryptoCurrencies() {
+    return this->cryptoCurrencies;
+}
+
+
+
 void DataLoader::addProduct(string type, string subType, Value &element) {
 
     if (type == "BankProduct") {
